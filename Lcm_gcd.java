@@ -11,11 +11,12 @@ public class Lcm_gcd {
         return n1;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n1 = sc.nextInt();
-        int n2 = sc.nextInt();
-        sc.close();
+        int n1;
+        int n2;
+        try (Scanner sc = new Scanner(System.in)) {
+            n1 = sc.nextInt();
+            n2 = sc.nextInt();
+        }
         
         int GCD = getGCD(n1, n2);
 
